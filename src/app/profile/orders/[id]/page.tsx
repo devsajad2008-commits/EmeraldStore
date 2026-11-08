@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { notFound } from "next/navigation";
+export default async function OrderDetailPage({ params }: { params: Promise<{ id: string }> }) { const { id } = await params; if (!id) notFound(); return <div className="container content-page"><div className="breadcrumbs"><Link href="/">خانه</Link><span>/</span><Link href="/profile/orders">سفارش‌ها</Link><span>/</span><span>{id}</span></div><div className="content-heading"><h1>جزئیات سفارش {id}</h1><p>سفارش واقعی با این شناسه ثبت نشده است؛ صفحه فقط برای نمایش مسیر کاربری ایجاد شده.</p></div><Link href="/profile/orders" className="button button-outline">بازگشت به سفارش‌ها</Link></div>; }

@@ -1,0 +1,3 @@
+import Link from "next/link";
+import { Package } from "lucide-react";
+export default function OrdersPage() { return <div className="container content-page"><div className="breadcrumbs"><Link href="/">خانه</Link><span>/</span><Link href="/profile">پروفایل</Link><span>/</span><span>سفارش‌های من</span></div><div className="content-heading"><h1>سفارش‌های من</h1><p>در این نسخه نمایشی سفارش واقعی ثبت نمی‌شود.</p></div><div className="empty-state"><span className="empty-icon"><Package/></span><h2>سفارشی برای نمایش وجود ندارد</h2><p>پس از ثبت سفارش در نسخه کامل، جزئیات اینجا نمایش داده می‌شود.</p><Link className="button button-green" href="/categories">شروع خرید</Link></div></div>; }
